@@ -19,3 +19,49 @@
 2026-05-25 16:59:01,321 INFO: Microblog startup [in C:\Users\justi\OneDrive\Documents\microblog\app\__init__.py:45]
 2026-05-25 18:52:57,770 INFO: Microblog startup [in C:\Users\justi\OneDrive\Documents\microblog\app\__init__.py:47]
 2026-05-25 19:20:06,673 INFO: Microblog startup [in C:\Users\justi\OneDrive\Documents\microblog\app\__init__.py:47]
+2026-05-27 22:54:52,845 INFO: Microblog startup [in C:\Users\justi\OneDrive\Documents\microblog\app\__init__.py:53]
+2026-05-27 22:54:54,582 ERROR: Exception on / [GET] [in C:\Users\justi\OneDrive\Documents\microblog\venv\Lib\site-packages\flask\app.py:875]
+Traceback (most recent call last):
+  File "C:\Users\justi\OneDrive\Documents\microblog\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\justi\OneDrive\Documents\microblog\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\justi\OneDrive\Documents\microblog\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\justi\OneDrive\Documents\microblog\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\justi\OneDrive\Documents\microblog\venv\Lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\justi\OneDrive\Documents\microblog\app\routes.py", line 30, in index
+    return render_template('index.html', title='Home', form=form,
+                           posts=posts.items, next_url=next_url,
+                           prev_url=prev_url)
+  File "C:\Users\justi\OneDrive\Documents\microblog\venv\Lib\site-packages\flask\templating.py", line 151, in render_template
+    return _render(app, template, context)
+  File "C:\Users\justi\OneDrive\Documents\microblog\venv\Lib\site-packages\flask\templating.py", line 132, in _render
+    rv = template.render(context)
+  File "C:\Users\justi\OneDrive\Documents\microblog\venv\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\justi\OneDrive\Documents\microblog\venv\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "C:\Users\justi\OneDrive\Documents\microblog\app\templates\index.html", line 2, in top-level template code
+    {% import "bootstrap_wtf.html" as wtf %}
+    ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\justi\OneDrive\Documents\microblog\app\templates\base.html", line 58, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^
+  File "C:\Users\justi\OneDrive\Documents\microblog\app\templates\index.html", line 7, in block 'content'
+    {{ wtf.quick_form(form) }}
+    ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\justi\OneDrive\Documents\microblog\venv\Lib\site-packages\jinja2\runtime.py", line 784, in _invoke
+    rv = self._func(*arguments)
+  File "C:\Users\justi\OneDrive\Documents\microblog\app\templates\bootstrap_wtf.html", line 54, in template
+    {%- for field, errors in field.errors.items() %}
+    ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\justi\OneDrive\Documents\microblog\venv\Lib\site-packages\jinja2\environment.py", line 490, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'field' is undefined
+2026-05-27 22:56:49,152 INFO: Microblog startup [in C:\Users\justi\OneDrive\Documents\microblog\app\__init__.py:53]
