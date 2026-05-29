@@ -10,8 +10,10 @@ from flask_mail import Mail
 from flask_moment import Moment
 from flask_babel import Babel, lazy_gettext as _l
 
+
 def get_locale():
     return request.accept_languages.best_match(app.config['LANGUAGES'])
+
 
 app = Flask(__name__)
 app.config.from_object(Config)
@@ -51,5 +53,6 @@ if not app.debug and not app.testing:
 
     app.logger.setLevel(logging.INFO)
     app.logger.info('Microblog startup')
+
 
 from app import routes, models, errors
