@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2026-05-29 17:13-0400\n"
+"POT-Creation-Date: 2026-05-31 15:08-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -37,7 +37,7 @@ msgstr ""
 msgid "Remember Me"
 msgstr ""
 
-#: app/forms.py:13 app/routes.py:51
+#: app/forms.py:13 app/routes.py:51 app/templates/login.html:5
 msgid "Sign In"
 msgstr ""
 
@@ -188,6 +188,22 @@ msgstr ""
 
 #: app/templates/index.html:21 app/templates/user.html:46
 msgid "Older posts"
+msgstr ""
+
+#: app/templates/login.html:7
+msgid "New User?"
+msgstr ""
+
+#: app/templates/login.html:7
+msgid "Click to Register!"
+msgstr ""
+
+#: app/templates/login.html:9
+msgid "Forgot Your Password?"
+msgstr ""
+
+#: app/templates/login.html:10
+msgid "Click to Reset It"
 msgstr ""
 
 #: app/templates/reset_password.html:5
